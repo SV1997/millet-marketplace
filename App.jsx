@@ -17,128 +17,128 @@ import slider3 from './slider3.png';
 // Data for products. Nutrient values are per 100 g as referenced from credible sources
 const products = [
   {
-    name: 'Sorghum (Jowar)',
-    description: 'Gluten‑free whole grain rich in antioxidants, ideal for rotis and porridges.',
+    name: 'Millet Flour (Jowar Atta)',
+    description: 'Gluten‑free millet flour perfect for rotis and baking.',
     image: product1,
     nutrients: { protein: 10.4, fiber: 2.9, minerals: 1.6, iron: 2.5, calcium: 25 }
   },
   {
-    name: 'Pearl Millet (Bajra)',
-    description: 'High in iron and minerals, this millet makes hearty flatbreads and porridges.',
+    name: 'Millet Flour (Bajra Atta)',
+    description: 'Rich in iron and minerals, ideal for flatbreads and parathas.',
     image: product2,
     nutrients: { protein: 10.6, fiber: 1.3, minerals: 2.3, iron: 8.0, calcium: 42 }
   },
   {
-    name: 'Finger Millet (Ragi)',
-    description: 'Calcium‑rich millet used for porridges, baked goods and baby foods.',
+    name: 'Millet Ragi Cookies',
+    description: 'Calcium‑rich millet cookies perfect for snacks.',
     image: product3,
     nutrients: { protein: 7.3, fiber: 3.6, minerals: 2.7, iron: 3.9, calcium: 364 }
   },
   {
-    name: 'Foxtail Millet',
-    description: 'Low‑glycaemic millet with a nutty flavour, perfect for pilafs and salads.',
+    name: 'Foxtail Millet Pasta',
+    description: 'Nutty‑flavoured foxtail millet pasta for healthy meals.',
     image: product4,
     nutrients: { protein: 12.3, fiber: 8.0, minerals: 3.3, iron: 2.8, calcium: 31 }
   },
   {
-    name: 'Proso Millet',
-    description: 'Mild tasting millet used in breakfast cereals and porridge bowls.',
+    name: 'Proso Millet Pancake Mix',
+    description: 'Mild millet pancake mix for wholesome breakfasts.',
     image: product1,
     nutrients: { protein: 12.5, fiber: 0.8, minerals: 1.9, iron: 0.8, calcium: 8 }
   },
   {
-    name: 'Kodo Millet',
-    description: 'A fibre‑rich millet with earthy flavour, great for savoury rice dishes.',
+    name: 'Kodo Millet Energy Bar',
+    description: 'Fibre‑rich millet energy bar for on‑the‑go nutrition.',
     image: product2,
     nutrients: { protein: 8.3, fiber: 9.0, minerals: 2.6, iron: 0.5, calcium: 27 }
   },
   {
-    name: 'Little Millet',
-    description: 'Small seeded millet that cooks quickly; ideal for upma and pilafs.',
+    name: 'Little Millet Breakfast Cereal',
+    description: 'Quick‑cooking millet cereal to start your day.',
     image: product3,
     nutrients: { protein: 7.7, fiber: 7.6, minerals: 2.5, iron: 9.3, calcium: 17 }
   },
   {
-    name: 'Barnyard Millet',
-    description: 'High‑fibre, low‑glycaemic grain perfect for stir‑fries and breakfast bowls.',
+    name: 'Barnyard Millet Noodles',
+    description: 'Low‑glycaemic millet noodles for stir‑fries.',
     image: product4,
     nutrients: { protein: 6.2, fiber: 13.6, minerals: 4.4, iron: 5.0, calcium: 11 }
   },
   {
-    name: 'Amaranth',
-    description: 'Pseudo‑cereal rich in protein and calcium, used in porridge and baking.',
+    name: 'Amaranth Granola Bars',
+    description: 'Protein‑rich amaranth granola bars with crunchy texture.',
     image: product1,
     nutrients: { protein: 14.0, fiber: 7.0, minerals: 0.0, iron: 7.6, calcium: 159 }
   },
   {
-    name: 'Quinoa',
-    description: 'Gluten‑free seed high in protein and fibre; cooks like rice.',
+    name: 'Quinoa Salad Mix',
+    description: 'Pre‑cooked quinoa mix for salads and bowls.',
     image: product2,
     nutrients: { protein: 14.0, fiber: 7.0, minerals: 0.0, iron: 4.6, calcium: 47 }
   },
   {
-    name: 'Rolled Oats',
-    description: 'Whole grain oats used for porridge with beta‑glucan fibre.',
+    name: 'Rolled Oats Millet Muesli',
+    description: 'Whole grain oats and millet muesli with fruits.',
     image: product3,
     nutrients: { protein: 13.15, fiber: 10.1, minerals: 0.0, iron: 4.25, calcium: 52 }
   },
   {
-    name: 'Barley',
-    description: 'Nutty grain rich in fibre; great for soups and stews.',
+    name: 'Barley Millet Crackers',
+    description: 'Nutty barley and millet crackers perfect for tea‑time.',
     image: product4,
     nutrients: { protein: 9.9, fiber: 16.0, minerals: 3.0, iron: 2.5, calcium: 29 }
   },
   {
-    name: 'Buckwheat',
-    description: 'Pseudo‑cereal with earthy flavour used in pancakes and soba noodles.',
+    name: 'Buckwheat Soba Noodles',
+    description: 'Earthy buckwheat soba noodles for soups.',
     image: product1,
     nutrients: { protein: 13.3, fiber: 10.0, minerals: 3.0, iron: 2.2, calcium: 18 }
   },
   {
-    name: 'Spelt',
-    description: 'Ancient wheat variety with nutty taste, used in breads and salads.',
+    name: 'Spelt & Millet Bread',
+    description: 'Ancient grain spelt bread blended with millet.',
     image: product2,
     nutrients: { protein: 12.0, fiber: 10.7, minerals: 0.0, iron: 4.4, calcium: 27 }
   },
   {
-    name: 'Rye',
-    description: 'Hearty grain for breads and crackers, rich in fibre and nutrients.',
+    name: 'Rye & Millet Biscuits',
+    description: 'Hearty rye biscuits enriched with millet.',
     image: product3,
     nutrients: { protein: 10.0, fiber: 15.0, minerals: 0.0, iron: 2.6, calcium: 24 }
   },
   {
-    name: 'Black Rice',
-    description: 'Forbidden rice with dark colour and rich antioxidants.',
+    name: 'Black Rice Pudding',
+    description: 'Forbidden black rice pudding for dessert.',
     image: product4,
     nutrients: { protein: 9.0, fiber: 4.9, minerals: 0.0, iron: 3.5, calcium: 30 }
   },
   {
-    name: 'Wild Rice',
-    description: 'Aquatic grass seed with chewy texture and nutty flavour.',
+    name: 'Wild Rice Pilaf Mix',
+    description: 'Chewy wild rice pilaf mix ready to cook.',
     image: product1,
     nutrients: { protein: 14.7, fiber: 6.2, minerals: 0.0, iron: 1.5, calcium: 21 }
   },
   {
-    name: 'Teff',
-    description: 'Tiny grain native to Ethiopia used to make injera; high in calcium.',
+    name: 'Teff Injera Wraps',
+    description: 'Ethiopian teff injera wraps for healthy wraps.',
     image: product2,
     nutrients: { protein: 13.3, fiber: 8.0, minerals: 0.0, iron: 7.6, calcium: 180 }
   },
   {
-    name: 'Fonio',
-    description: 'West African millet with light, nutty flavour; cooks quickly.',
+    name: 'Fonio Couscous',
+    description: 'Quick‑cooking fonio couscous with nutty flavour.',
     image: product3,
     nutrients: { protein: 9.0, fiber: 1.9, minerals: 0.0, iron: 2.8, calcium: 40 }
   },
   {
-    name: 'Brown Top Millet',
-    description: 'Drought‑tolerant millet grown in arid regions; good for porridges.',
+    name: 'Brown Top Millet Snack Mix',
+    description: 'Crunchy millet snack mix for anytime munching.',
     image: product4,
     nutrients: { protein: 11.5, fiber: 12.5, minerals: 0.0, iron: 3.0, calcium: 50 }
   },
   {
-    name: 'White Rice',
-    description: 'Long‑grain white rice used in daily meals across the world.',
+    name: 'White Rice Poha',
+    description: 'Flattened rice (poha) for quick breakfasts and snacks.',
     image: product1,
     nutrients: { protein: 7.13, fiber: 1.3, minerals: 0.0, iron: 0.8, calcium: 28 }
   }
