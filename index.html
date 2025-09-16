@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millet Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Millet Marketplace</h1>
+            <p>Your one‑stop shop for healthy millet grains</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <h3>Pearl Millet (Bajra)</h3>
+                    <p class="price">₹120/kg</p>
+                    <p>Pearl millet is a hearty, gluten‑free grain rich in protein and fiber. Perfect for flatbreads, porridge and desserts.</p>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <h3>Finger Millet (Ragi)</h3>
+                    <p class="price">₹150/kg</p>
+                    <p>Finger millet is packed with calcium and iron, making it an ideal choice for healthy rotis, porridge and baked goods.</p>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <h3>Foxtail Millet</h3>
+                    <p class="price">₹130/kg</p>
+                    <p>Foxtail millet is light and easy to cook with a mildly nutty flavour. A great alternative to rice for salads and pilafs.</p>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <h3>Barnyard Millet</h3>
+                    <p class="price">₹110/kg</p>
+                    <p>Barnyard millet is a high‑fiber, low‑glycemic grain perfect for stir‑fries, breakfast bowls and desserts.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Millet Marketplace. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
