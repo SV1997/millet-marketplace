@@ -167,24 +167,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Array of product objects with descriptions and nutrient values
 const products = [
-  { name: 'Sorghum (Jowar)', description: 'Gluten‑free whole grain rich in antioxidants, ideal for rotis and porridges.', image: 'assets/product1.png', nutrients: { protein: 10.4, fiber: 2.9, minerals: 1.6, iron: 2.5, calcium: 25 } },
-  { name: 'Pearl Millet (Bajra)', description: 'High in iron and minerals, this millet makes hearty flatbreads and porridges.', image: 'assets/product2.png', nutrients: { protein: 10.8, fiber: 1.3, minerals: 2.3, iron: 8.0, calcium: 38 } },
-  { name: 'Finger Millet (Ragi)', description: 'Calcium‑rich millet used for porridges, baked goods and baby foods.', image: 'assets/product3.png', nutrients: { protein: 7.3, fiber: 3.6, minerals: 2.7, iron: 4.6, calcium: 344 } },
-  { name: 'Foxtail Millet', description: 'Low‑glycaemic millet with a nutty flavour, perfect for pilafs and salads.', image: 'assets/product4.png', nutrients: { protein: 12.3, fiber: 8.0, minerals: 3.3, iron: 2.8, calcium: 31 } },
-  { name: 'Proso Millet', description: 'Mild tasting millet used in breakfast cereals and porridge bowls.', image: 'assets/product1.png', nutrients: { protein: 12.5, fiber: 5.2, minerals: 1.9, iron: 0.8, calcium: 14 } },
-  { name: 'Kodo Millet', description: 'A fibre‑rich millet with earthy flavour, great for savoury rice dishes.', image: 'assets/product2.png', nutrients: { protein: 8.3, fiber: 9.0, minerals: 2.6, iron: 0.5, calcium: 27 } },
-  { name: 'Little Millet', description: 'Small seeded millet that cooks quickly; ideal for upma and pilafs.', image: 'assets/product3.png', nutrients: { protein: 9.7, fiber: 7.6, minerals: 1.5, iron: 9.0, calcium: 17 } },
-  { name: 'Barnyard Millet', description: 'High‑fibre, low‑glycaemic grain perfect for stir‑fries and breakfast bowls.', image: 'assets/product4.png', nutrients: { protein: 6.2, fiber: 9.8, minerals: 4.4, iron: 5.0, calcium: 11 } },
-  { name: 'Teff', description: 'Tiny grain from Ethiopia rich in iron and calcium; great for injera and breads.', image: 'assets/product1.png', nutrients: { protein: 9.6, fiber: 8.0, minerals: 2.7, iron: 5.4, calcium: 180 } },
-  { name: 'Fonio', description: 'West African millet with delicate texture, high in minerals and amino acids.', image: 'assets/product2.png', nutrients: { protein: 7.0, fiber: 4.0, minerals: 2.5, iron: 8.5, calcium: 40 } },
-  { name: 'Brown Top Millet', description: 'Rare millet variety known for resilience and balanced nutrient profile.', image: 'assets/product3.png', nutrients: { protein: 12.0, fiber: 1.9, minerals: 2.7, iron: 5.0, calcium: 10 } },
-  { name: 'Amaranth', description: 'Ancient pseudo‑cereal packed with protein and lysine, used in porridges and baking.', image: 'assets/product4.png', nutrients: { protein: 14.0, fiber: 7.0, minerals: 3.0, iron: 7.6, calcium: 159 } },
-  { name: 'Quinoa', description: 'Gluten‑free seed that cooks fluffy like rice; complete protein source.', image: 'assets/product1.png', nutrients: { protein: 14.1, fiber: 7.0, minerals: 3.0, iron: 4.6, calcium: 47 } },
-  { name: 'Rolled Oats', description: 'Whole grain oat flakes high in soluble fibre; ideal for oatmeal and granola.', image: 'assets/product2.png', nutrients: { protein: 13.15, fiber: 10.1, minerals: 3.0, iron: 4.25, calcium: 52 } },
+  { name: 'Sorghum (Jowar)', description: 'Gluten‑free whole grain rich in antioxidants, ideal for rotis and porridges.', image: 'product1.png', nutrients: { protein: 10.4, fiber: 2.9, minerals: 1.6, iron: 2.5, calcium: 25 } },
+  { name: 'Pearl Millet (Bajra)', description: 'High in iron and minerals, this millet makes hearty flatbreads and porridges.', image: 'product2.png', nutrients: { protein: 10.8, fiber: 1.3, minerals: 2.3, iron: 8.0, calcium: 38 } },
+  { name: 'Finger Millet (Ragi)', description: 'Calcium‑rich millet used for porridges, baked goods and baby foods.', image: 'product3.png', nutrients: { protein: 7.3, fiber: 3.6, minerals: 2.7, iron: 4.6, calcium: 344 } },
+  { name: 'Foxtail Millet', description: 'Low‑glycaemic millet with a nutty flavour, perfect for pilafs and salads.', image: 'product4.png', nutrients: { protein: 12.3, fiber: 8.0, minerals: 3.3, iron: 2.8, calcium: 31 } },
+  { name: 'Proso Millet', description: 'Mild tasting millet used in breakfast cereals and porridge bowls.', image: 'product1.png', nutrients: { protein: 12.5, fiber: 5.2, minerals: 1.9, iron: 0.8, calcium: 14 } },
+  { name: 'Kodo Millet', description: 'A fibre‑rich millet with earthy flavour, great for savoury rice dishes.', image: 'product2.png', nutrients: { protein: 8.3, fiber: 9.0, minerals: 2.6, iron: 0.5, calcium: 27 } },
+  { name: 'Little Millet', description: 'Small seeded millet that cooks quickly; ideal for upma and pilafs.', image: 'product3.png', nutrients: { protein: 9.7, fiber: 7.6, minerals: 1.5, iron: 9.0, calcium: 17 } },
+  { name: 'Barnyard Millet', description: 'High‑fibre, low‑glycaemic grain perfect for stir‑fries and breakfast bowls.', image: 'product4.png', nutrients: { protein: 6.2, fiber: 9.8, minerals: 4.4, iron: 5.0, calcium: 11 } },
+  { name: 'Teff', description: 'Tiny grain from Ethiopia rich in iron and calcium; great for injera and breads.', image: 'product1.png', nutrients: { protein: 9.6, fiber: 8.0, minerals: 2.7, iron: 5.4, calcium: 180 } },
+  { name: 'Fonio', description: 'West African millet with delicate texture, high in minerals and amino acids.', image: 'product2.png', nutrients: { protein: 7.0, fiber: 4.0, minerals: 2.5, iron: 8.5, calcium: 40 } },
+  { name: 'Brown Top Millet', description: 'Rare millet variety known for resilience and balanced nutrient profile.', image: 'product3.png', nutrients: { protein: 12.0, fiber: 1.9, minerals: 2.7, iron: 5.0, calcium: 10 } },
+  { name: 'Amaranth', description: 'Ancient pseudo‑cereal packed with protein and lysine, used in porridges and baking.', image: 'product4.png', nutrients: { protein: 14.0, fiber: 7.0, minerals: 3.0, iron: 7.6, calcium: 159 } },
+  { name: 'Quinoa', description: 'Gluten‑free seed that cooks fluffy like rice; complete protein source.', image: 'product1.png', nutrients: { protein: 14.1, fiber: 7.0, minerals: 3.0, iron: 4.6, calcium: 47 } },
+  { name: 'Rolled Oats', description: 'Whole grain oat flakes high in soluble fibre; ideal for oatmeal and granola.', image: 'product2.png', nutrients: { protein: 13.15, fiber: 10.1, minerals: 3.0, iron: 4.25, calcium: 52 } },
   {
     name: 'Barley',
     description: 'Chewy grain used in soups and salads; provides beta‑glucan fibre.',
-    image: 'assets/product3.png',
+    image: 'product3.png',
     // Nutrition facts for pearled barley per 100 g come from FoodStruct: 9.9 g protein, 16 g fibre, 29 mg calcium and 2.5 mg iron【735883871143133†L426-L455】.
     nutrients: {
       protein: 9.9,
@@ -197,7 +197,7 @@ const products = [
   {
     name: 'Buckwheat',
     description: 'Pseudo‑cereal with nutty taste; naturally gluten‑free and versatile.',
-    image: 'assets/product4.png',
+    image: 'product4.png',
     // Nutrient values based on FoodStruct: 13.3 g protein, 10 g fibre, 2.2 mg iron and 18 mg calcium per 100 g【902311409600944†L103-L107】.
     nutrients: {
       protein: 13.3,
@@ -207,10 +207,10 @@ const products = [
       calcium: 18
     }
   },
-  { name: 'Spelt', description: 'Ancient wheat variety with mellow flavour used in breads and pasta.', image: 'assets/product1.png', nutrients: { protein: 5.5, fiber: 3.8, minerals: 2.0, iron: 1.6, calcium: 9.5 } },
-  { name: 'Rye', description: 'Hardy grain used in breads with distinctive flavour and high fibre.', image: 'assets/product2.png', nutrients: { protein: 10.0, fiber: 15.0, minerals: 3.0, iron: 2.6, calcium: 24 } },
-  { name: 'Black Rice', description: 'Antioxidant‑rich rice with dark purple hue; slightly sweet and nutty.', image: 'assets/product3.png', nutrients: { protein: 8.9, fiber: 4.9, minerals: 2.0, iron: 2.4, calcium: 10 } },
-  { name: 'Wild Rice', description: 'Semi‑aquatic grass seed with chewy texture and subtle smoky flavour.', image: 'assets/product4.png', nutrients: { protein: 4.0, fiber: 2.0, minerals: 2.0, iron: 0.5, calcium: 3 } }
+  { name: 'Spelt', description: 'Ancient wheat variety with mellow flavour used in breads and pasta.', image: 'product1.png', nutrients: { protein: 5.5, fiber: 3.8, minerals: 2.0, iron: 1.6, calcium: 9.5 } },
+  { name: 'Rye', description: 'Hardy grain used in breads with distinctive flavour and high fibre.', image: 'product2.png', nutrients: { protein: 10.0, fiber: 15.0, minerals: 3.0, iron: 2.6, calcium: 24 } },
+  { name: 'Black Rice', description: 'Antioxidant‑rich rice with dark purple hue; slightly sweet and nutty.', image: 'product3.png', nutrients: { protein: 8.9, fiber: 4.9, minerals: 2.0, iron: 2.4, calcium: 10 } },
+  { name: 'Wild Rice', description: 'Semi‑aquatic grass seed with chewy texture and subtle smoky flavour.', image: 'product4.png', nutrients: { protein: 4.0, fiber: 2.0, minerals: 2.0, iron: 0.5, calcium: 3 } }
 ];
 
 /** Render product cards dynamically into the products container. */
