@@ -1,5 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import React, { useState, useEffect } from 'react';
+
+// Import shared layout and UI components
+import Navbar from './components/Navbar.jsx';
+import Slider from './components/Slider.jsx';
+import ProductCard from './components/ProductCard.jsx';
+import InfoModal from './components/InfoModal.jsx';
 import './App.css';
 
 // Import assets for products and slider
@@ -200,27 +205,21 @@ function App() {
   // Components for pages
   const HomePage = () => (
     <>
-      <div className="slider">
-        <img src={sliderImages[currentSlide]} alt={`Slide ${currentSlide + 1}`} className="slide" />
-        <div className="dots">
-          {sliderImages.map((_, idx) => (
-            <span
-              key={idx}
-              className={idx === currentSlide ? 'dot active' : 'dot'}
-              onClick={() => setCurrentSlide(idx)}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Use the Slider component for the hero carousel */}
+      <Slider
+        images={sliderImages}
+        currentSlide={currentSlide}
+        setCurrentSlide={setCurrentSlide}
+      />
+      {/* Render each processed millet item using ProductCard */}
       <div className="product-grid">
         {products.map((product, idx) => (
-          <div className="product-card" key={idx}>
-            <img src={product.image} alt={product.name} className="product-image" />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <button className="add-btn" onClick={() => addToCart(product)}>Add to Cart</button>
-            <button className="info-btn" onClick={() => openModal(product)}>Info</button>
-          </div>
+          <ProductCard
+            key={idx}
+            product={product}
+            addToCart={addToCart}
+            openModal={openModal}
+          />
         ))}
       </div>
     </>
@@ -262,90 +261,18 @@ function App() {
   );
 
   return (
-    <div className="app">
-      <Navbar page={page} setPage={setPage} cartCount={cart.length} theme={theme} toggleTheme={toggleTheme} />
+    <div className={`app ${theme}`}>
+      {/* Pass cart count, theme and handlers to Navbar */}
+      <Navbar cart={cart} theme={theme} toggleTheme={toggleTheme} setPage={setPage} />
       {page === 'home' && <HomePage />}
       {page === 'cart' && <CartPage />}
       {page === 'settings' && <SettingsPage />}
-      {modalData.visible && <InfoModal product={modalData.product} onClose={closeModal} />}
+      {modalData.visible && (
+        <InfoModal modalData={modalData} closeModal={closeModal} />
+      )}
     </div>
   );
 }
 
-function Navbar({ page, setPage, cartCount, theme, toggleTheme }) {
-  return (
-    <nav className="navbar">
-      <h1 className="logo">Millet Marketplace</h1>
-      <ul className="nav-links">
-        <li className={page === 'home' ? 'active' : ''} onClick={() => setPage('home')}>Home</li>
-        <li className={page === 'cart' ? 'active' : ''} onClick={() => setPage('cart')}>Cart ({cartCount})</li>
-        <li className={page === 'settings' ? 'active' : ''} onClick={() => setPage('settings')}>Settings</li>
-      </ul>
-      <button className="theme-btn" onClick={toggleTheme}>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</button>
-    </nav>
-  );
-}
-
-function InfoModal({ product, onClose }) {
-  const canvasRef = useRef(null);
-  // Render chart on mount/update
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    // Destroy existing chart if present
-    if (canvas.chartInstance) {
-      canvas.chartInstance.destroy();
-    }
-    const chart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Protein (g)', 'Fibre (g)', 'Minerals (g)', 'Iron (mg)', 'Calcium (mg)'],
-        datasets: [
-          {
-            label: product.name,
-            data: [
-              product.nutrients.protein,
-              product.nutrients.fiber,
-              product.nutrients.minerals,
-              product.nutrients.iron,
-              product.nutrients.calcium
-            ],
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          title: { display: true, text: `${product.name} Nutritional Profile` },
-        },
-        scales: {
-          x: {
-            title: { display: true, text: 'Nutrients' },
-          },
-          y: {
-            title: { display: true, text: 'Value' },
-            beginAtZero: true,
-          },
-        },
-      },
-    });
-    canvas.chartInstance = chart;
-    // Clean up chart on unmount
-    return () => chart.destroy();
-  }, [product]);
-
-  return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose}>×</button>
-        <h2>{product.name}</h2>
-        <p>{product.description}</p>
-        <canvas ref={canvasRef} width={400} height={300}></canvas>
-      </div>
-    </div>
-  );
-}
 
 export default App;
