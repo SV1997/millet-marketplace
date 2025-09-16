@@ -3,13 +3,16 @@ import Chart from 'chart.js/auto';
 import './App.css';
 
 // Import assets for products and slider
-import product1 from './assets/product1.png';
-import product2 from './assets/product2.png';
-import product3 from './assets/product3.png';
-import product4 from './assets/product4.png';
-import slider1 from './assets/slider1.png';
-import slider2 from './assets/slider2.png';
-import slider3 from './assets/slider3.png';
+// Import images from the repository root. Vite will copy these static assets
+// Note: when flattening the project structure, images live in the project root.
+// Update paths to import from the current directory instead of parent folders.
+import product1 from './product1.png';
+import product2 from './product2.png';
+import product3 from './product3.png';
+import product4 from './product4.png';
+import slider1 from './slider1.png';
+import slider2 from './slider2.png';
+import slider3 from './slider3.png';
 
 // Data for products. Nutrient values are per 100 g as referenced from credible sources
 const products = [
